@@ -13,3 +13,9 @@ await page.getByRole("button", {"name":"Sign in"}).click()
 await expect(page.getByText("Your password is incorrect")).toContainText('Your password is incorrect')
 
 })
+
+test('Google Title', async ({page})=>{
+
+await page.goto("https://www.google.com/")
+console.log(await page.title());
+})
