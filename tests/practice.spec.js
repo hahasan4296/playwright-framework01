@@ -17,3 +17,9 @@ test('Browser - Register an account Playwright test', async ({ browser }) => {
     console.log(await page.locator(".card-body h5 b").allTextContents());
 
 });
+
+test('Google Title', async ({page})=>{
+
+await page.goto("https://www.google.com/")
+console.log(await page.title());
+})
